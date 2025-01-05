@@ -89,6 +89,8 @@ def scrape_pdf_urls():
                 next_link = driver.find_element(By.CSS_SELECTOR, "a.m-icon-angle-right.m-active")
                 if not next_link.is_displayed():
                     break
+                driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", next_link)
+                time.sleep(1)
                 next_link.click()
                 time.sleep(PAGE_LOAD_DELAY)
             except NoSuchElementException:

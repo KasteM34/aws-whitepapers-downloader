@@ -29,6 +29,13 @@ pip3 install -r requirements.txt
 python3 downloader.py
 ```
 
+WSL Fix. Get the latest version from chromedriver
+```bash
+sudo rm /usr/local/bin/chromedriver
+sudo apt-get update
+sudo apt-get install chromium-chromedriver
+```
+
 ## Configuration
 Edit the constants at the top of downloader.py to customize:
 
